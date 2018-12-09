@@ -590,6 +590,8 @@ div.search-form{
     float: left;
     height: 420px;
     width: 30%;
+    position: relative;
+    z-index: 5;
 }
 
 .home-text-slider .text-slider-title{
@@ -672,6 +674,7 @@ div.search-form{
     border: 1px solid #E9E9E9;
     padding: 20px;
     border-right: 5px solid #555555;
+    z-index: 9;
 }
 .home-announcement-slider .slider-text-walpaper {
     padding: 10px 0;
@@ -715,6 +718,8 @@ div.search-form{
 .predprinimatel-content{
     padding: 25px 20px 27px 20px;
     background: #fff;
+    position: relative;
+    z-index: 3;
 }
 .predprinimatel-title{
     margin: 10px 0 0 0;
@@ -801,4 +806,20 @@ div.search-form{
     color:#0094D2;
     border-color: #0094D2;
     text-decoration: none;
+}
+.anonuncer-walpaper::after,
+.predprinimatel-block::after{
+    content: "";
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+    width: 80%;
+    border-radius: 50%;
+    height: 1px;
+    box-shadow: 1px 4px 20px 1px #b9b5b5;
+}
+.home-text-slider-wallpaer::after,
+.anonuncer-walpaper::after{
+    top: -2px;
 }

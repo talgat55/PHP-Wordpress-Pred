@@ -45,6 +45,7 @@ get_header(); ?>
                             ?>
 
                         </div>
+                        <div class="home-text-slider-wallpaer">
                         <div class="home-text-slider">
                             <?php
 
@@ -66,6 +67,7 @@ get_header(); ?>
 
                             endwhile;
                             ?>
+                        </div>
                         </div>
 
                     </div>
