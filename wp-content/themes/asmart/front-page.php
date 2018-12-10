@@ -46,17 +46,17 @@ get_header(); ?>
 
                         </div>
                         <div class="home-text-slider-wallpaer">
-                        <div class="home-text-slider">
-                            <?php
+                            <div class="home-text-slider">
+                                <?php
 
 
-                            while ($the_query_slider->have_posts()) :
-                                $the_query_slider->the_post();
-                                $post_id_slider = $the_query_slider->post->ID;
+                                while ($the_query_slider->have_posts()) :
+                                    $the_query_slider->the_post();
+                                    $post_id_slider = $the_query_slider->post->ID;
 
 
-                                //$image   = aq_resize( $img_url, 1200, 800, true ); // Resize & crop img
-                                echo '
+                                    //$image   = aq_resize( $img_url, 1200, 800, true ); // Resize & crop img
+                                    echo '
                                     <div class="slider-text-walpaper" >
                                             <div class="content-home-slider"> 
                                                         <div class="text-slider-date">' . get_the_date('d.m.Y', $post_id_slider) . '</div>
@@ -65,9 +65,9 @@ get_header(); ?>
                                      </div>';
 
 
-                            endwhile;
-                            ?>
-                        </div>
+                                endwhile;
+                                ?>
+                            </div>
                         </div>
 
                     </div>
@@ -140,7 +140,7 @@ get_header(); ?>
                                 echo ' 
                                      
                                     <div class="predprinimatel-block  col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                        <div class="predprinimatel-img-block" style="background: url('.$img_url.') no-repeat;"></div>
+                                        <div class="predprinimatel-img-block" style="background: url(' . $img_url . ') no-repeat;"></div>
                                         <div class="predprinimatel-content">
                                             <div class="date-predprinimatel">' . get_the_date('d.m.Y', $post_id_slider) . '</div>
                                             <h3 class="predprinimatel-title">' . get_the_title($post_id_slider) . '</h3>
@@ -159,14 +159,119 @@ get_header(); ?>
 
                         </div>
                     </div>
-                        <div class="block-over">
-                            <a href="#"  class="link-to-all">
-                                Перейти ко всем новостям
-                            </a>
-                        </div>
+                    <div class="block-over">
+                        <a href="#" class="link-to-all">
+                            Перейти ко всем новостям
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section class="point-growth-section">
+
+            <div class="container">
+                <div class="row">
+                    <div class="margin-top-60 margin-bottom-60 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="row  img-overlay">
+                            <img src="<?php echo get_theme_file_uri('/assets/images/pointimage.jpg') ?>" alt="Картинка">
+                        </div>
+                    </div>
+                    <div class="  margin-bottom-60 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="pointer-text-block">
+                                <h2 class="page-title">
+                                    Точка роста
+                                </h2>
+                                <div class="title-separate"></div>
+                                <p>
+                                    Узнавание бренда категорически поддерживает имидж. Практика однозначно показывает,
+                                    что
+                                    таргетирование программирует креатив, невзирая на действия конкурентов. Не факт, что
+                                    разработка медиаплана деятельно усиливает комплексный анализ ситуации, полагаясь на
+                                    инсайдерскую информацию. В соответствии с законом Ципфа, презентация консолидирует
+                                    инструмент маркетинга.
+                                    <br/>
+                                    <br/>
+                                    Искусство медиапланирования достижимо в разумные сроки. Емкость рынка концентрирует
+                                    из
+                                    ряда вон выходящий нестандартный подход. Рекламная заставка, суммируя приведенные
+                                    примеры, слабо охватывает продвигаемый сегмент рынка.
+                                </p>
+                                <a href="#" class="link-predprinimatel-detail">Узнать больше</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="qa-section">
+
+            <div class="container">
+                <div class="row">
+                    <div class="margin-top-60 margin-bottom-60 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <h2 class="page-title">
+                                Вопрос-ответ
+                            </h2>
+                            <div class="title-separate"></div>
+                            <div class="qa-block">
+
+                                <div class="block-qa-wrap">
+                                    <div class="title-accordion">
+                                        Высокая информативность развивает SWOT-анализ?<i
+                                                class="fas fa-chevron-circle-down"></i>
+                                    </div>
+                                    <div class="content-qa">
+                                        Не факт, что разработка медиаплана деятельно усиливает комплексный анализ
+                                        ситуации, полагаясь на инсайдерскую информацию.
+                                    </div>
+                                </div>
+                                <div class="block-qa-wrap">
+                                    <div class="title-accordion">
+                                        Рекламный клаттер изменяет стратегический?<i
+                                                class="fas fa-chevron-circle-down"></i>
+                                    </div>
+                                    <div class="content-qa">
+                                        Не факт, что разработка медиаплана деятельно усиливает комплексный анализ
+                                        ситуации, полагаясь на инсайдерскую информацию.
+                                    </div>
+                                </div>
+                                <div class="block-qa-wrap">
+                                    <div class="title-accordion">
+                                        Емкость рынка инновационна?<i class="fas fa-chevron-circle-down"></i>
+                                    </div>
+                                    <div class="content-qa">
+                                        Не факт, что разработка медиаплана деятельно усиливает комплексный анализ
+                                        ситуации, полагаясь на инсайдерскую информацию.
+                                    </div>
+                                </div>
+                                <div class="block-qa-wrap">
+                                    <div class="title-accordion">
+                                        Продвижение проекта трансформирует инструмент??<i class="fas fa-chevron-circle-down"></i>
+                                    </div>
+                                    <div class="content-qa">
+                                        Не факт, что разработка медиаплана деятельно усиливает комплексный анализ
+                                        ситуации, полагаясь на инсайдерскую информацию.
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="margin-top-60  margin-bottom-60 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="row">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="service-row"
                  style="background: url(<?php echo get_theme_file_uri('/assets/images/bg-service.jpg'); ?>);">
             <h2 class="padding-top-60 title-section white" style="margin-top: 0;">наши услуги</h2>
@@ -227,6 +332,7 @@ get_header(); ?>
             </div>
 
         </section>
+
         <section class="review-row">
             <h2 class=" title-section">отзывы</h2>
             <div class="container">
@@ -264,6 +370,7 @@ get_header(); ?>
 
             </div>
         </section>
+
         <?php /* <section class="partners-row"
                  style="background: url(<?php echo get_theme_file_uri('/assets/images/bg-part-compressor.jpg'); ?>);">
             <h2 class=" padding-top-60  title-section">наши партнеры</h2>

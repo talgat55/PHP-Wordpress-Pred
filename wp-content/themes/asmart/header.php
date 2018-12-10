@@ -44,8 +44,7 @@
                                 <p>08:00 — 18:00</p>
                             </div>
                             <div class="location">
-                                <img src="<?php echo get_theme_file_uri('/assets/images/geo.png') ?>"
-                                     alt="Иконка локации">
+                                <img src="<?php echo get_theme_file_uri('/assets/images/geo.png') ?>" alt="Иконка локации">
                                 <div>
                                     <span>г. Омск</span>
                                     <p>
