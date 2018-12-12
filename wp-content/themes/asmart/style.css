@@ -366,6 +366,7 @@ template {
     color: #0094D2;
     font-family: 'Gotham Pro Medium';
 }
+.contact-row .phone a,
 .top-header-right-block .phone a{
     font-family: 'Gotham Pro Regular';
     line-height: 17px;
@@ -373,6 +374,7 @@ template {
     color: #292929;
     padding-left: 12px;
 }
+.contact-row .phone p,
 .top-header-right-block .phone p{
     font-family: 'Gotham Pro Regular';
     line-height: 12px;
@@ -404,12 +406,14 @@ template {
     display: inline-block;
     text-align: left;
 }
+.contact-row .location p,
 .top-header-right-block .location p,
 .top-header-right-block .call p{
     line-height: 12px;
     font-size: 10px;
     color: #787878;
 }
+.contact-row .location span,
 .top-header-right-block .location span,
 .top-header-right-block .call a{
     line-height: 17px;
@@ -432,10 +436,17 @@ template {
     line-height: 17px;
     font-size: 14px;
     color: #FFFFFF;
-    padding-left: 35px;
+    padding: 22px;
+}
+.top-main-container li  a:hover,
+.current-menu-item a{
+    background: #fff;
+    color:#0094D2!important;
+    text-decoration: none;
 }
 .top-main-container li {
     display: inline-block;
+    float: left;
 }
 .bottom-header{
     background: linear-gradient(180deg, #414141 0%, #313131 100%);
@@ -449,15 +460,19 @@ header{
 .search-form{
     float: right;
 }
+.slider-text-walpaper{
+    cursor: pointer;
+}
 .bottom-header{
     position: absolute;
     width: 100%;
     left: 0;
+    height: 56px;
     bottom: -22px;
 }
 .top-main-container{
     margin: 0;
-    padding: 15px 0 15px 127px;
+    padding: 15px 0 15px 140px;
 }
 .search-submit i{
     line-height: 15px;
@@ -515,6 +530,8 @@ div.search-form{
 .top-header{
     background: linear-gradient(180deg, #FFFFFF 0%, #EAEAEA 100%);
 }
+
+
 /*
 * Main
  */
@@ -884,10 +901,202 @@ div.search-form{
     float: right;
     color: #0094D2;
 }
+.qa-block{
+    padding-right: 50px;
+}
 .content-qa{
     line-height: 20px;
     font-size: 12px;
     color: #292929;
     padding-right: 25px;
     padding-bottom: 25px;
+}
+.form-feedback  h3{
+    line-height: 26px;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 0;
+    color: #292929;
+}
+
+.separator-form-title{
+    width: 100px;
+    height: 1px;
+    background: #DFDFDF;
+    display: table;
+    margin: 20px auto 25px auto;
+}
+.form-feedback textarea,
+.form-feedback input{
+    line-height: 17px;
+    font-size: 14px;
+    font-family: 'Gotham Pro Light';
+    color: #000;
+    padding: 15px 20px ;
+    border: 1px solid #DFDFDF;
+    width: 100%;
+    border-radius: 3px;
+}
+.form-feedback input{
+    margin-bottom: 10px;
+}
+textarea::-webkit-input-placeholder ,
+input::-webkit-input-placeholder {
+    line-height: 17px;
+    font-size: 14px;
+    font-family: 'Gotham Pro Light';
+    color: #A9A9A9;
+}
+textarea:-ms-input-placeholder ,
+input:-ms-input-placeholder {
+    line-height: 17px;
+    font-size: 14px;
+    font-family: 'Gotham Pro Light';
+    color: #A9A9A9;
+}
+textarea::-ms-input-placeholder ,
+input::-ms-input-placeholder {
+    line-height: 17px;
+    font-size: 14px;
+    font-family: 'Gotham Pro Light';
+    color: #A9A9A9;
+}
+textarea::placeholder ,
+input::placeholder {
+    line-height: 17px;
+    font-size: 14px;
+    font-family: 'Gotham Pro Light';
+    color: #A9A9A9;
+}
+.wpcf7-submit{
+    line-height: 17px!important;
+    font-size: 14px!important;
+    color: #0094D2!important;
+    padding: 15px 52px!important;
+    border: 1px solid #0094D2!important;
+    box-sizing: border-box!important;
+    border-radius: 3px!important;
+    -webkit-transition: .3s!important;
+    transition: .3s!important;
+    background: transparent!important;
+    display: table!important;
+    margin: 18px auto  0 auto!important;
+    width: auto!important;
+}
+.wpcf7-submit:hover{
+    background:  #0094D2!important;
+    color: #fff!important;
+}
+.form-feedback{
+    background: #fff;
+    padding: 35px 30px 10px 30px;
+}
+
+.form-overlay{
+    background: linear-gradient(180deg, #0094D2 0%, #0087C0 100%);
+    border-radius: 3px;
+    padding: 30px;
+}
+.page-title.margin-top-0{
+    margin-top: 0!important;
+}
+.form-feedback .col-lg-6:last-child{
+    padding-left: 0!important;
+}
+.contact-row .location,
+.contact-row .phone{
+    display: inline-block;
+}
+.contact-row .location div{
+    display: inline-block;
+    padding-left: 12px;
+}
+.contact-row .location{
+    padding-left: 62px;
+}
+.contact-row .location img{
+    vertical-align: top;
+    position: relative;
+    top: 4px;
+}
+.map-holder{
+    background: url(assets/images/map.png);
+}
+.maps-link{
+    line-height: 17px;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 15px 68px;
+    display: table;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #0094D2 0%, #0087C0 100%);
+    border-radius: 3px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border: 1px solid transparent;
+}
+.maps-link:hover{
+    color: #0094D2;
+    border-color: #0094D2;
+    text-decoration: none;
+    background: transparent;
+}
+.map-holder {
+    padding: 41px;
+}
+
+.contact-row .page-title{
+    margin-bottom: 16px;
+}
+.contact-row .title-separate{
+    margin-bottom: 40px;
+}
+
+footer{
+    background: #414141;
+}
+.top-footer .top-main-container{
+    padding: 35px 30px 30px 30px ;
+}
+.top-footer .menu-mainmenu-container {
+    display: table;
+    margin: 0 auto;
+}
+.top-footer{
+    border-bottom: 1px solid #6D6D6D;
+}
+.bottom-footer p{
+    font-family: 'Gotham Pro Light';
+}
+.bottom-footer{
+    line-height: 17px;
+    font-size: 14px;
+    color: #E5E5E5;
+    padding: 30px 0;
+
+}
+.bottom-footer span{
+    font-family: 'Gotham Pro Medium';
+}
+.padding-right-0{
+    padding-right: 0;
+}
+.bootom-copyright{
+    line-height: 17px;
+    font-size: 14px;
+    color: #E5E5E5;
+    text-underline: none;
+}
+.bootom-copyright span{
+    text-decoration: underline;
+}
+.bootom-copyright:hover{
+    color: #fff;
+}
+.col-lg-6custom{
+    width: 56%;
+}
+.col-lg-5custom{
+    width: 44%;
 }
