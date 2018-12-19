@@ -58,6 +58,57 @@ jQuery(document).ready(function() {
 
     Accordion();
 
+//----------------------------------
+// Map
+//------------------------------------
+    if (jQuery('.map-holder').length) {
+
+        ymaps.ready(function () {
+            var myMap = new ymaps.Map('map', {
+                    center: [54.997053, 73.350672],
+                    zoom: 12,
+                    controls: ['zoomControl']
+                }, {
+                    // searchControlProvider: 'yandex#search'
+                }),
+
+                // Создаём макет содержимого.
+                /*  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                  ),*/
+
+                myPlacemark = new ymaps.Placemark([54.997053, 73.350672], {
+                    id: '1'
+                }, {
+
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    //
+                    // iconImageHref: 'http://lightxdesign.fvds.ru/images/geo1.png',
+                    // // Размеры метки.
+                    // iconImageSize: [123, 132],
+                    // // Смещение левого верхнего угла иконки относительно
+                    // // её "ножки" (точки привязки).
+                    // iconImageOffset: [-62, -132]
+                });
+
+
+            myMap.geoObjects
+
+                .add(myPlacemark);
+
+            myMap.behaviors.disable('scrollZoom');
+            myMap.behaviors.disable('multiTouch');
+
+
+            myMap.behaviors.disable('drag');
+
+
+        });
+    }
+
 // end redy function
 
 });

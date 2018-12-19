@@ -2,7 +2,9 @@
 /*
 * Require Image resize
 */
-
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
 include_once('inc/aq_resizer.php');
 /*
 * Register nav menu
@@ -68,14 +70,11 @@ function th_scripts()
     wp_enqueue_script('jquery.inputmask', get_theme_file_uri('/assets/js/jquery.inputmask.js'), array(), '');
     wp_enqueue_script('lg-thumbnail.min', get_theme_file_uri('/assets/js/lg-thumbnail.min.js'), array(), '');
     wp_enqueue_script('default', get_theme_file_uri('/assets/js/default.js'), array(), '');
-    if (is_page_template('page-contact.php')) {
 
-        wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDkewQZi7iY6eOtlXajXXHFWHECGYWqfMs', array(), '2');
+    if (is_front_page() ) {
 
-        wp_enqueue_script('maps', get_theme_file_uri('/assets/js/maps.js'), array(), '2');
-    }
-    if (is_front_page() OR is_home()) {
-        wp_enqueue_script('vk', 'https://vk.com/js/api/openapi.js?151', array(), '');
+        wp_enqueue_script('yandex-maps', '//api-maps.yandex.ru/2.1/?lang=ru_RU', array(), '');
+
     }
 
 
@@ -156,64 +155,64 @@ function post_type_predprenimtels()
 }
 
 /*
-*  Rgister Post Type Testimonials
+*  Rgister Post Type  Qa
 */
 
-add_action('init', 'post_type_review');
+add_action('init', 'post_type_qa');
 
-function post_type_review()
+function post_type_qa()
 {
     $labels = array(
-        'name' => 'Отзывы',
-        'singular_name' => 'Отзывы',
-        'all_items' => 'Отзывы',
-        'menu_name' => 'Отзывы' // ссылка в меню в админке
+        'name' => 'Вопрос ответ',
+        'singular_name' => 'Вопрос ответ',
+        'all_items' => 'Вопрос ответ',
+        'menu_name' => 'Вопрос ответ' // ссылка в меню в админке
     );
     $args = array(
         'labels' => $labels,
         'public' => true,
         'menu_position' => 5,
         'has_archive' => true,
-        'query_var' => "review",
+        'query_var' => "qa_type",
         'supports' => array(
             'title',
             'editor',
             'thumbnail'
         )
     );
-    register_post_type('review', $args);
+    register_post_type('qa_type', $args);
 }
 
 
 /*
 *  Rgister Post Type Slider
 */
-
-add_action('init', 'post_type_slider');
-
-function post_type_slider()
-{
-    $labels = array(
-        'name' => 'Слайдер',
-        'singular_name' => 'Слайдер',
-        'all_items' => 'Слайдер',
-        'menu_name' => 'Слайдер' // ссылка в меню в админке
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'menu_position' => 5,
-        'has_archive' => true,
-        'query_var' => "slider",
-        'supports' => array(
-            'title',
-            'editor',
-            'thumbnail'
-        ),
-        'taxonomies' => array('category')
-    );
-    register_post_type('slider', $args);
-}
+//
+//add_action('init', 'post_type_slider');
+//
+//function post_type_slider()
+//{
+//    $labels = array(
+//        'name' => 'Слайдер',
+//        'singular_name' => 'Слайдер',
+//        'all_items' => 'Слайдер',
+//        'menu_name' => 'Слайдер' // ссылка в меню в админке
+//    );
+//    $args = array(
+//        'labels' => $labels,
+//        'public' => true,
+//        'menu_position' => 5,
+//        'has_archive' => true,
+//        'query_var' => "slider",
+//        'supports' => array(
+//            'title',
+//            'editor',
+//            'thumbnail'
+//        ),
+//        'taxonomies' => array('category')
+//    );
+//    register_post_type('slider', $args);
+//}
 
 
 /*
@@ -232,155 +231,6 @@ if (function_exists('acf_add_options_page')) {
 
 }
 
-/*
- *  Pagination
- */
-function paginate_links_custom($args = '')
-{
-    global $wp_query, $wp_rewrite;
-
-    // Setting up default values based on the current URL.
-    $pagenum_link = html_entity_decode(get_pagenum_link());
-    $url_parts = explode('?', $pagenum_link);
-
-    // Get max pages and current page out of the current query, if available.
-    $total = isset($wp_query->max_num_pages) ? $wp_query->max_num_pages : 1;
-    $current = get_query_var('paged') ? intval(get_query_var('paged')) : 1;
-
-    // Append the format placeholder to the base URL.
-    $pagenum_link = trailingslashit($url_parts[0]) . '%_%';
-
-    // URL base depends on permalink settings.
-    $format = $wp_rewrite->using_index_permalinks() && !strpos($pagenum_link, 'index.php') ? 'index.php/' : '';
-    $format .= $wp_rewrite->using_permalinks() ? user_trailingslashit($wp_rewrite->pagination_base . '/%#%', 'paged') : '?paged=%#%';
-
-    $defaults = array(
-        'base' => $pagenum_link, // http://example.com/all_posts.php%_% : %_% is replaced by format (below)
-        'format' => $format, // ?page=%#% : %#% is replaced by the page number
-        'total' => $total,
-        'current' => $current,
-        'aria_current' => 'page',
-        'show_all' => false,
-        'prev_next' => true,
-        'prev_text' => __('&laquo; Previous'),
-        'next_text' => __('Next &raquo;'),
-        'end_size' => 1,
-        'mid_size' => 2,
-        'type' => 'plain',
-        'add_args' => array(), // array of query args to add
-        'add_fragment' => '',
-        'before_page_number' => '',
-        'after_page_number' => '',
-    );
-
-    $args = wp_parse_args($args, $defaults);
-
-    if (!is_array($args['add_args'])) {
-        $args['add_args'] = array();
-    }
-
-    // Merge additional query vars found in the original URL into 'add_args' array.
-    if (isset($url_parts[1])) {
-        // Find the format argument.
-        $format = explode('?', str_replace('%_%', $args['format'], $args['base']));
-        $format_query = isset($format[1]) ? $format[1] : '';
-        wp_parse_str($format_query, $format_args);
-
-        // Find the query args of the requested URL.
-        wp_parse_str($url_parts[1], $url_query_args);
-
-        // Remove the format argument from the array of query arguments, to avoid overwriting custom format.
-        foreach ($format_args as $format_arg => $format_arg_value) {
-            unset($url_query_args[$format_arg]);
-        }
-
-        $args['add_args'] = array_merge($args['add_args'], urlencode_deep($url_query_args));
-    }
-
-    // Who knows what else people pass in $args
-    $total = (int)$args['total'];
-    if ($total < 2) {
-        return;
-    }
-    $current = (int)$args['current'];
-    $end_size = (int)$args['end_size']; // Out of bounds?  Make it the default.
-    if ($end_size < 1) {
-        $end_size = 1;
-    }
-    $mid_size = (int)$args['mid_size'];
-    if ($mid_size < 0) {
-        $mid_size = 2;
-    }
-    $add_args = $args['add_args'];
-    $r = '';
-    $page_links = array();
-    $dots = false;
-
-    if ($args['prev_next'] && $current && 1 < $current) :
-        $link = str_replace('%_%', 2 == $current ? '' : $args['format'], $args['base']);
-        $link = str_replace('%#%', $current - 1, $link);
-        if ($add_args)
-            $link = add_query_arg($add_args, $link);
-        $link .= $args['add_fragment'];
-
-        /**
-         * Filters the paginated links for the given archive pages.
-         *
-         * @since 3.0.0
-         *
-         * @param string $link The paginated link URL.
-         */
-        $page_links[] = '<a class="link-prev" href="' . esc_url(apply_filters('paginate_links', $link)) . '">' . $args['prev_text'] . '</a>';
-    endif;
-    $page_links[] = '<div class="center-pagination">';
-    for ($n = 1; $n <= $total; $n++) :
-        if ($n == $current) :
-            $page_links[] = "<span aria-current='" . esc_attr($args['aria_current']) . "' class='link-top-pag current'>" . $args['before_page_number'] . number_format_i18n($n) . $args['after_page_number'] . "</span>";
-            $dots = true;
-        else :
-            if ($args['show_all'] || ($n <= $end_size || ($current && $n >= $current - $mid_size && $n <= $current + $mid_size) || $n > $total - $end_size)) :
-                $link = str_replace('%_%', 1 == $n ? '' : $args['format'], $args['base']);
-                $link = str_replace('%#%', $n, $link);
-                if ($add_args)
-                    $link = add_query_arg($add_args, $link);
-                $link .= $args['add_fragment'];
-
-                /** This filter is documented in wp-includes/general-template.php */
-                $page_links[] = "<a class='link-top-pag' href='" . esc_url(apply_filters('paginate_links', $link)) . "'>" . $args['before_page_number'] . number_format_i18n($n) . $args['after_page_number'] . "</a>";
-                $dots = true;
-            elseif ($dots && !$args['show_all']) :
-                $page_links[] = '<span class="page-numbers dots">' . __('&hellip;') . '</span>';
-                $dots = false;
-            endif;
-        endif;
-    endfor;
-    $page_links[] = '</div>';
-    if ($args['prev_next'] && $current && $current < $total) :
-        $link = str_replace('%_%', $args['format'], $args['base']);
-        $link = str_replace('%#%', $current + 1, $link);
-        if ($add_args)
-            $link = add_query_arg($add_args, $link);
-        $link .= $args['add_fragment'];
-
-        /** This filter is documented in wp-includes/general-template.php */
-        $page_links[] = '<a class="link-next" href="' . esc_url(apply_filters('paginate_links', $link)) . '">' . $args['next_text'] . '</a>';
-    endif;
-    switch ($args['type']) {
-        case 'array' :
-            return $page_links;
-
-        case 'list' :
-            $r .= "<ul class='page-numbers'>\n\t<li>";
-            $r .= join("</li>\n\t<li>", $page_links);
-            $r .= "</li>\n</ul>\n";
-            break;
-
-        default :
-            $r = join("\n", $page_links);
-            break;
-    }
-    return $r;
-}
 
 /*
  * * Икувыскгьи
@@ -390,7 +240,7 @@ function dimox_breadcrumbs()
 {
 
     /* === ОПЦИИ === */
-    $text['home'] = 'Главная'; // текст ссылки "Главная"
+    $text['home'] = 'Главная страница'; // текст ссылки "Главная"
     $text['category'] = '%s'; // текст для страницы рубрики
     $text['search'] = 'Результаты поиска по запросу "%s"'; // текст для страницы с результатами поиска
     $text['tag'] = 'Записи с тегом "%s"'; // текст для страницы тега
@@ -401,7 +251,7 @@ function dimox_breadcrumbs()
 
     $wrap_before = '<div class="breadcrumbs main" itemscope itemtype="http://schema.org/BreadcrumbList">'; // открывающий тег обертки
     $wrap_after = '</div><!-- .breadcrumbs -->'; // закрывающий тег обертки
-    $sep = '<i class="fas fa-caret-right"></i>'; // разделитель между "крошками"
+    $sep = '/'; // разделитель между "крошками"
     $sep_before = '<span class="sep">'; // тег перед разделителем
     $sep_after = '</span>'; // тег после разделителя
     $show_home_link = 1; // 1 - показывать ссылку "Главная", 0 - не показывать
@@ -571,181 +421,6 @@ function dimox_breadcrumbs()
 
     }
 }
-
-
-/**
- * AJAX Load More
- */
-
-function be_ajax_load_more()
-{
-    $args = isset($_POST['query']) ? array_map('esc_attr', $_POST['query']) : array();
-    //$args['post_type'] = isset( $args['post_type'] ) ? esc_attr( $args['post_type'] ) : 'post';
-    $args['post_type'] = $_POST['query'];
-    $args['paged'] = esc_attr($_POST['page']);
-    $args['post_status'] = 'publish';
-    ob_start();
-    $loop = new WP_Query($args);
-    if ($loop->have_posts()): while ($loop->have_posts()): $loop->the_post();
-        be_post_summary();
-    endwhile; endif;
-    wp_reset_postdata();
-    $data = ob_get_clean();
-    wp_send_json_success($data);
-    wp_die();
-}
-
-add_action('wp_ajax_be_ajax_load_more', 'be_ajax_load_more');
-add_action('wp_ajax_nopriv_be_ajax_load_more', 'be_ajax_load_more');
-
-
-function be_post_summary()
-{
-
-    $img_url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()), 'full');
-
-
-    echo '
-                       <li class="news-item" style="background: url(' . $img_url . ');">
-
-                        <div class="content-news-item">
-                                <div class="date">' . get_the_date('d.m.Y') . '</div>
-                                <div class="title">' . get_the_title(get_the_ID()) . '</div>
-                                <a href="' . get_the_permalink(get_the_ID()) . '" class="link-to-news">Читать новость</a>
-                        </div>
-                        <div class="overlay-news"></div>
-
-                    </li>
-    ';
-
-}
-
-
-/*
- * Content below "Add to cart" Button.
- */
-add_action('woocommerce_after_single_product_summary', 'add_content_after_addtocart_button_func2');
-
-function add_content_after_addtocart_button_func2()
-{
-
-    // Echo content.
-    echo '<div class="after-content">'.get_the_content(get_the_ID()).'</div>';
-
-}
-/*
- *  Change position price
- */
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
-
-/*
- *   Remove Tabs
- */
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
-
-
-
-
-/*
- *  Change position meta
- */
-
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
-add_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 20);
-/*
- * * Before button add
- */
-function my_content($content)
-{
-    global $product;
-    $price_html = $product->get_price();
-
-
-    $content .= '<div class="custom_content">
-                    <h3>Цена</h3>
-                    <div class="price-single">' . wc_price($price_html, array('currency' => ' ')) . ' Р</div>
-                    ';
-    if ($product->is_in_stock()) {
-        $content .= '<div class="stock" >' . $product->get_stock_quantity() . __(' <i class="fas fa-check-circle"></i> в наличии', 'envy') . '</div>';
-    }
-    $content .= '            </div>';
-    return $content;
-}
-
-add_filter('woocommerce_short_description', 'my_content', 10, 2);
-
-/*
- *  Text button add
- */
-add_filter('single_add_to_cart_text', 'woo_custom_cart_button_text');
-function woo_custom_cart_button_text()
-{
-    return __('Заказать', 'woocommerce');
-}
-/*
- * Content below "Add to cart" Button.
- */
-add_action('woocommerce_after_add_to_cart_button', 'add_content_after_addtocart_button_func');
-
-function add_content_after_addtocart_button_func()
-{
-
-    // Echo content.
-    echo '<div class="second_content">
-            <h3>как купить понравившуюся модель?</h3>
-            <p>
-            Купить понравившуюся модель можно в магазине, адрес которого указан на странице товара.
-            <br>
-            <br>
-            Для удобства Вы можете забронировать свой размер через сайт. Вашу пару отложат в магазине на 1 день. Придя в магазин, Вам надо будет просто назвать ФИО и номер заказа. 
-            <br>
-            <br>
-            Доставка товара на дом и в другие города в настоящее время не осуществляется.
-            </p>
-        </div>';
-
-}
-
-/**
- * Show cart contents / total Ajax
- */
-add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
-
-function woocommerce_header_add_to_cart_fragment( $fragments ) {
-    global $woocommerce;
-
-    ob_start();
-
-    ?>
-    <a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('Перейти в корзину', 'woothemes'); ?>"><?php echo sprintf(_n('%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php echo $woocommerce->cart->get_cart_total(); ?></a>
-    <?php
-    $fragments['a.cart-customlocation'] = ob_get_clean();
-    return $fragments;
-}
-
-remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
-add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
-
-
-if ( ! function_exists( 'woocommerce_template_loop_product_thumbnail' ) ) {
-    function woocommerce_template_loop_product_thumbnail() {
-        echo woocommerce_get_product_thumbnail();
-    }
-}
-if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
-    function woocommerce_get_product_thumbnail( $size = 'product', $placeholder_width = 0, $placeholder_height = 0  ) {
-        global $post, $woocommerce;
-        $output = '<div class="imagewrapper">';
-
-        if ( has_post_thumbnail() ) {
-            $output .= get_the_post_thumbnail( get_the_ID(), $size );
-        }
-        $output .= '</div>';
-        return $output;
-    }
-}
-
 
 /*
 * Custom excerpt

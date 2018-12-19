@@ -305,7 +305,7 @@ get_header(); ?>
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                            <div class="map-holder">
+                            <div id="map"  class="map-holder">
                                 <a href="#" class="maps-link">
                                     Посмотреть на карте
                                 </a>
