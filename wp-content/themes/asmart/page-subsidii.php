@@ -25,30 +25,20 @@ get_header(); ?>
                     <h3>
                         Скачать документы
                     </h3>
+                    <ul class="list-doc">
                     <?php
-//
-//                    $args = array(
-//                        'posts_per_page' => '10',
-//                        'post_type' => 'qa_type',
-//                        'paged'          => ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1
-//                    );
-//
-//                    $the_query = new WP_Query($args);
-//
-//                    if ( $the_query->have_posts() ) :
-//                    while ($the_query->have_posts()) :
-//                        $the_query->the_post();
-//                        $post_id = $the_query->post->ID;
-//
-//
-//
-//
-//
-//                    endwhile;
-//
-//                    endif;
-                    ?>
 
+
+                    $files = get_field('files');
+
+                    foreach ($files as $file){
+                            echo '
+                                <li> <i class="far fa-file"></i> <a target="_blank" href="'.$file['doc']['url'].'"  > <span>'.$file['doc']['title'].'</span> ('. (getRemoteFileSize($file['doc']['url'] ) / 1000).' кб.)</a></li>
+                            ';
+                    }
+
+                    ?>
+                    </ul>
 
                 </div>
 

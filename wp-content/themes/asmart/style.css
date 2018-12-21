@@ -1325,3 +1325,33 @@ footer{
     font-size: 14px;
     color: #292929;
 }
+.list-doc{
+    margin: 0;
+    padding: 0;
+}
+.list-doc li {
+    display: block;
+    list-style: none;
+    margin-bottom: 20px;
+}
+.list-doc li  a{
+    text-decoration: none;
+    line-height: 24px;
+    font-size: 14px;
+    text-decoration-line: underline;
+    color: #0094D2;
+}
+.list-doc li i{
+    color: #0094D2;
+}
+.list-doc li  a span{
+    text-decoration: underline;
+    font-family: 'Gotham Pro Medium';
+}
+.subcidii-block h3{
+    line-height: 29px;
+    font-size: 24px;
+    font-family: 'Gotham Pro Medium';
+    color: #292929;
+    margin: 0 0 30px;
+}
