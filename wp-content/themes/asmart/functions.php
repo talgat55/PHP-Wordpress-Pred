@@ -433,3 +433,15 @@ function my_string_limit_words($string, $word_limit)
     //	return implode(' ', $words).'... ';
     return implode(' ', $words) . '...';
 }
+
+
+add_filter('gettext', 'translate_text');
+add_filter('ngettext', 'translate_text');
+
+function translate_text($translated) {
+    $translated = str_ireplace('Oops! That page can&rsquo;t be found.', 'К сожалению! Эта страница не может быть найдена.', $translated);
+    $translated = str_ireplace('It looks like nothing was found at this location', 'Похоже, что ничего не было найдено по данному запросу', $translated);
+
+    return $translated;
+
+}

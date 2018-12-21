@@ -18,23 +18,20 @@
 get_header(); ?>
 
     <div class="wrap">
-        <div id="primary" class="content-area main-page  basic-page">
+        <div id="primary" class="content-area  basic-page">
             <div class="container">
-                <?php
+                <div class="row">
+                    <?php dimox_breadcrumbs(); ?>
+                    <h1 class=" page-title"><?php the_title(); ?></h1>
+                    <div class="title-separate"></div>
+                    <?php
+                    while (have_posts()) : the_post();
 
+                        the_content();
 
-                dimox_breadcrumbs();
-                ?>
-                <h1 class=" page-title"><?php the_title(); ?></h1>
-                <?php
-                while (have_posts()) : the_post();
-
-                    the_content();
-
-                endwhile; // End of the loop.
-                ?>
-
-            </div><!-- #main -->
+                    endwhile;  ?>
+                </div>
+            </div>
         </div><!-- #primary -->
     </div><!-- .wrap -->
 
