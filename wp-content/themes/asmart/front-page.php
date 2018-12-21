@@ -222,47 +222,35 @@ get_header(); ?>
                             </h2>
                             <div class="title-separate"></div>
                             <div class="qa-block">
+                                <?php
+                                $args = array(
+                                'posts_per_page' => '4',
+                                'post_type' => 'qa_type'
+                                );
 
-                                <div class="block-qa-wrap">
-                                    <div class="title-accordion">
-                                        Высокая информативность развивает SWOT-анализ?<i
-                                                class="fas fa-chevron-circle-down"></i>
-                                    </div>
-                                    <div class="content-qa">
-                                        Не факт, что разработка медиаплана деятельно усиливает комплексный анализ
-                                        ситуации, полагаясь на инсайдерскую информацию.
-                                    </div>
-                                </div>
-                                <div class="block-qa-wrap">
-                                    <div class="title-accordion">
-                                        Рекламный клаттер изменяет стратегический?<i
-                                                class="fas fa-chevron-circle-down"></i>
-                                    </div>
-                                    <div class="content-qa">
-                                        Не факт, что разработка медиаплана деятельно усиливает комплексный анализ
-                                        ситуации, полагаясь на инсайдерскую информацию.
-                                    </div>
-                                </div>
-                                <div class="block-qa-wrap">
-                                    <div class="title-accordion">
-                                        Емкость рынка инновационна?<i class="fas fa-chevron-circle-down"></i>
-                                    </div>
-                                    <div class="content-qa">
-                                        Не факт, что разработка медиаплана деятельно усиливает комплексный анализ
-                                        ситуации, полагаясь на инсайдерскую информацию.
-                                    </div>
-                                </div>
-                                <div class="block-qa-wrap">
-                                    <div class="title-accordion">
-                                        Продвижение проекта трансформирует инструмент??<i
-                                                class="fas fa-chevron-circle-down"></i>
-                                    </div>
-                                    <div class="content-qa">
-                                        Не факт, что разработка медиаплана деятельно усиливает комплексный анализ
-                                        ситуации, полагаясь на инсайдерскую информацию.
-                                    </div>
-                                </div>
+                                $the_query = new WP_Query($args);
 
+                                while ($the_query->have_posts()) :
+                                $the_query->the_post();
+                                $post_id = $the_query->post->ID;
+
+
+
+                                //$image   = aq_resize( $img_url, 1200, 800, true ); // Resize & crop img
+                                echo '
+                                <div class="block-qa-wrap">
+                                    <div class="title-accordion">
+                                        '.get_the_title($post_id).'<i class="fas fa-chevron-circle-down"></i>
+                                    </div>
+                                    <div class="content-qa">
+                                        '.get_the_content($post_id).'
+                                    </div>
+                                </div>
+                                ';
+
+
+                                endwhile;
+                                ?>
 
                             </div>
 
