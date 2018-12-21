@@ -337,10 +337,7 @@ textarea {
     display: table;
     content: " ";
 }
-.container{
-    width: 1200px;
-    margin: 0 auto;
-}
+
 template {
     display: none;
 }
@@ -1438,4 +1435,160 @@ footer{
 }
 .policy-block{
     margin-top: 0;
+}
+
+@media (min-width: 1201px)  {
+    .container{
+        width: 1200px;
+        margin: 0 auto;
+    }
+
+}
+@media (max-width: 1200px) and (min-width: 970px){
+    .container {
+        width: 970px;
+    }
+}
+@media (max-width: 1200px) {
+    .finanace-block-img.img-overlay img{
+        max-width: 100%;
+    }
+    .logo{
+        float: left;
+    }
+    .logo-slogan {
+        font-size: 16px;
+        display: table;
+        padding-top: 34px;
+        padding-left: 21px;
+    }
+    .top-header-right-block .location {
+        padding-right: 10px;
+    }
+    .top-header-right-block .phone {
+        padding-right: 9px;
+    }
+    .search-form{
+        display: none;
+    }
+    .contact-row .location {
+        padding-left: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    .bottom-header .menu-mainmenu-container{
+        display: none;
+    }
+    ul#responsive-menu {
+        padding-top: 70px;
+    }
+    #responsive-menu-button{
+        position: absolute!important;
+        top: 91px!important;
+        background: transparent!important;
+    }
+    .top-header-right-block{
+        display: none;
+    }
+}
+
+@media (max-width: 988px){
+    .home-image-slider {
+        width: 100%;
+        float: none;
+    }
+    .home-text-slider {
+        float: none;
+        height: 420px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .finanace-block-img.img-overlay::after, .point-growth-section .img-overlay::after{
+        display: none;
+    }
+    .pointer-text-block .page-title{
+        margin-top: 0;
+    }
+    .pointer-text-block {
+        padding-left: 0;
+    }
+    .row.img-overlay {
+        margin-right: -15px;
+    }
+    .finance-third .finanace-block-text, .finance-first .finanace-block-text {
+        padding-left: 0;
+        padding-top: 30px;
+    }
+    .predprinimatel-block {
+        padding: 0 20px;
+    }
+    .col-lg-5custom,
+    .col-lg-6custom{
+        width: 100%;
+    }
+    .bottom-footer{
+        text-align: center;
+    }
+    .qa-block{
+        padding-right: 0;
+    }
+    .qa-section .margin-top-60:last-child{
+        margin-top: 0;
+    }
+    .finanace-block-img.img-overlay img {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .finance-second .finanace-block-text{
+        padding-right: 0;
+    }
+    .form-feedback .col-lg-6:last-child{
+        padding-left: 15px!important;
+    }
+    .contact-row .location, .contact-row .phone {
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+    .top-footer .top-main-container li{
+        display: block;
+        float: none;
+        padding: 4px 0;
+        text-align: center;
+    }
+    .top-main-container li a:hover, .current-menu-item a{
+        background: transparent;
+    }
+    .qa-section,
+    .point-growth-section,
+    .our-section-predprinimatel {
+        padding: 0 15px;
+    }
+}
+@media (max-width: 768px){
+    .content-area.basic-page,
+    .content-area.qa-page,
+    .content-area.about-page{
+        padding: 0 15px;
+    }
+    .about-full-image img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 600px){
+    .bottom-header {
+        position: relative;
+        width: 100%;
+        left: 0;
+        height: 56px;
+        bottom: 0;
+    }
+    .row-top-header {
+        margin-bottom: 20px;
+    }
+    .logo-slogan {
+        padding-top: 48px;
+    }
+    #responsive-menu-button {
+        top: 144px !important;
+    }
 }

@@ -49,7 +49,12 @@ jQuery(document).ready(function() {
         jQuery('.home-image-slider').slick('slickGoTo', currentIndex);
 
     });
+    /*
+    * Replace test search in menu for mobile
+     */
 
+
+    jQuery('.responsive-menu-search-box').attr("placeholder", "Поиск");
     /*
     *   modal
     */

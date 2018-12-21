@@ -99,8 +99,10 @@ get_header(); ?>
                                     echo '
                                     <div class="slider-text-walpaper" >
                                             <div class="content-home-slider"> 
-                                                        <div class="text-slider-date">' . get_the_date('d.m.Y', $post_id_slider) . '</div>
-                                                        <div class="text-slider-title">' . get_the_title($post_id_slider) . '</div> 
+                                                        <a href="' . get_the_permalink($post_id_slider) . '" >  
+                                                            <div class="text-slider-date">' . get_the_date('d.m.Y', $post_id_slider) . '</div>
+                                                            <div class="text-slider-title">' . get_the_title($post_id_slider) . '</div> 
+                                                        </a>
                                             </div>
                                      </div>';
 
@@ -201,7 +203,7 @@ get_header(); ?>
                                     ряда вон выходящий нестандартный подход. Рекламная заставка, суммируя приведенные
                                     примеры, слабо охватывает продвигаемый сегмент рынка.
                                 </p>
-                                <a href="#" class="link-predprinimatel-detail">Узнать больше</a>
+                                <a href="/point-raise" class="link-predprinimatel-detail">Узнать больше</a>
                             </div>
                         </div>
                     </div>

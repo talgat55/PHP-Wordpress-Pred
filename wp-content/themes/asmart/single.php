@@ -12,34 +12,22 @@
 
 get_header(); ?>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
+    <div class="wrap">
+        <div id="primary" class="content-area  basic-page">
+            <div class="container">
+                <div class="row">
+                    <?php dimox_breadcrumbs(); ?>
+                    <h1 class=" page-title"><?php the_title(); ?></h1>
+                    <div class="title-separate"></div>
+                    <?php
+                    while (have_posts()) : the_post();
 
+                        the_content();
 
-			<?php
-			/* Start the Loop */
-            if ( is_singular( 'product' ) ) {
-                wc_get_template_part( 'single-product' );
-
-            }else if(is_singular( 'post' ) ){
-
-                wc_get_template_part( 'template/single-content' );
-            }else if(is_singular( 'service' ) ){
-
-                wc_get_template_part( 'template/service-content' );
-            }else{
-                while ( have_posts() ) : the_post();
-
-                    the_content();
-
-
-                endwhile; // End of the loop.
-            }
-
-			?>
-
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+                    endwhile;  ?>
+                </div>
+            </div>
+        </div><!-- #primary -->
+    </div><!-- .wrap -->
 
 <?php get_footer();
