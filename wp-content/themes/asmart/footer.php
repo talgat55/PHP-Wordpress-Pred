@@ -30,7 +30,11 @@
             </div>
 
         </div>
-
+        <div class="modal-main">
+            <i class="fas fa-times"></i>
+            <?= do_shortcode('[contact-form-7 id="119" title="модальное окно"   html_class="form form-feedback-modal" ]'); ?>
+        </div>
+        <div class="overlay-modal-layer"></div>
     </div><!-- .wrap -->
 </footer><!-- #colophon -->
 </div><!-- .site-content-contain -->

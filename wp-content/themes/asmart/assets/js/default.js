@@ -51,6 +51,23 @@ jQuery(document).ready(function() {
     });
 
     /*
+    *   modal
+    */
+    jQuery('body').on('click', '.modal-main i, .overlay-modal-layer',function(){
+
+        jQuery('.modal-main').fadeOut();
+        jQuery('.overlay-modal-layer').fadeOut();
+
+    });
+
+    jQuery('body').on('click', '.call-link',function(){
+
+        jQuery('.modal-main').fadeIn();
+        jQuery('.overlay-modal-layer').fadeIn();
+        return false;
+
+    });
+    /*
     * Input telephone mask
     */
 
