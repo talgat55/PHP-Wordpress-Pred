@@ -37,7 +37,7 @@ get_header(); ?>
                              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="finanace-block-text">
                                     <h2 class="page-title  margin-top-0">
-                                        Субсидии — это
+                                        Субсидии
                                     </h2>
                                     <div class="title-separate"></div>
                                     <?php
@@ -64,7 +64,7 @@ get_header(); ?>
                                     $grant_text = get_field('grant-text');
                                     echo $grant_text;
                                     ?>
-
+                                    <a href="/finansovaya-poderzhka-2/grantovayapoderzka/" class="link-predprinimatel-detail">Подробнее о грантовой поддержки</a>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -122,7 +122,7 @@ get_header(); ?>
 
                                     echo $premia_text;
                                     ?>
-
+                                    <a href="/finansovaya-poderzhka-2/premiyaglavi/" class="link-predprinimatel-detail">Подробнее о премии главы</a>
                                 </div>
                             </div>
 

@@ -165,7 +165,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="block-over">
-                        <a href="#" class="link-to-all">
+                        <a href="/news" class="link-to-all">
                             Перейти ко всем новостям
                         </a>
                     </div>
@@ -296,7 +296,7 @@ get_header(); ?>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                             <div id="map"  class="map-holder">
-                                <a href="#" class="maps-link">
+                                <a href="https://yandex.ru/maps/66/omsk/?ll=73.374444%2C54.987655&mode=poi&poi%5Bpoint%5D=73.362665%2C54.988775&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1171876261&z=15.48"   target="_blank" class="maps-link">
                                     Посмотреть на карте
                                 </a>
                             </div>

@@ -10,7 +10,7 @@ jQuery(document).ready(function() {
     */
 
     jQuery('.home-image-slider').slick({
-        infinite: true,
+        infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
@@ -20,7 +20,7 @@ jQuery(document).ready(function() {
     });
 
     jQuery('.home-text-slider').slick({
-        infinite: true,
+        infinite: false,
         slidesToShow: 5,
         slidesToScroll: 1,
         vertical: true,
@@ -45,7 +45,7 @@ jQuery(document).ready(function() {
     jQuery('body').on('click', '.home-text-slider .slider-text-walpaper',function(){
 
         var currentIndex = jQuery(this).index();
-
+        console.log(currentIndex);
         jQuery('.home-image-slider').slick('slickGoTo', currentIndex);
 
     });
@@ -80,56 +80,7 @@ jQuery(document).ready(function() {
 
     Accordion();
 
-//----------------------------------
-// Map
-//------------------------------------
-    if (jQuery('.map-holder').length) {
 
-        ymaps.ready(function () {
-            var myMap = new ymaps.Map('map', {
-                    center: [54.997053, 73.350672],
-                    zoom: 12,
-                    controls: ['zoomControl']
-                }, {
-                    // searchControlProvider: 'yandex#search'
-                }),
-
-                // Создаём макет содержимого.
-                /*  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-                      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-                  ),*/
-
-                myPlacemark = new ymaps.Placemark([54.997053, 73.350672], {
-                    id: '1'
-                }, {
-
-                    // Опции.
-                    // Необходимо указать данный тип макета.
-                    iconLayout: 'default#image',
-                    // Своё изображение иконки метки.
-                    //
-                    // iconImageHref: 'http://lightxdesign.fvds.ru/images/geo1.png',
-                    // // Размеры метки.
-                    // iconImageSize: [123, 132],
-                    // // Смещение левого верхнего угла иконки относительно
-                    // // её "ножки" (точки привязки).
-                    // iconImageOffset: [-62, -132]
-                });
-
-
-            myMap.geoObjects
-
-                .add(myPlacemark);
-
-            myMap.behaviors.disable('scrollZoom');
-            myMap.behaviors.disable('multiTouch');
-
-
-            myMap.behaviors.disable('drag');
-
-
-        });
-    }
 
 // end redy function
 

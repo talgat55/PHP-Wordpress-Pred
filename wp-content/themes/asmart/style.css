@@ -14,6 +14,10 @@ Version: 1.0
     box-sizing: border-box;
     outline: none;
 }
+*:active,
+*:focus{
+    outline: none;
+}
 @font-face {
     font-family: 'Gotham Pro Light';
     src: url('./assets/fonts/GothamPro-Light.woff') format('woff'),
@@ -1052,6 +1056,12 @@ input::placeholder {
 }
 .map-holder{
     background: url(assets/images/map.png);
+    padding: 41px;
+
+}
+.map-holder{
+    width: 100%;
+    height: 132px;
 }
 .maps-link{
     line-height: 17px;
@@ -1066,15 +1076,13 @@ input::placeholder {
     -webkit-transition: .3s;
     transition: .3s;
     border: 1px solid transparent;
+    z-index: 7;
 }
 .maps-link:hover{
     color: #0094D2;
     border-color: #0094D2;
     text-decoration: none;
     background: transparent;
-}
-.map-holder {
-    padding: 41px;
 }
 
 .contact-row .page-title{
@@ -1168,6 +1176,7 @@ footer{
 .content-area.about-page{
     margin-bottom: 60px;
 }
+.content-area.news-page .title-separate ,
 .content-area.search-page .title-separate ,
 .content-area.subcidii-page .title-separate ,
 .content-area.basic-page .title-separate ,
@@ -1178,11 +1187,16 @@ footer{
 .content-area.search-page h1,
 .content-area.subcidii-page h1,
 .content-area.basic-page h1,
+.content-area.news-page h1,
 .content-area.qa-page h1,
 .content-area.about-page h1{
     margin-top: 15px;
     margin-bottom: 10px;
 }
+.news-page .predprinimatel-class::after{
+    display: none;
+}
+
 .content-area.search-page{
     margin-bottom: 60px;
 }
@@ -1565,6 +1579,7 @@ footer{
     }
 }
 @media (max-width: 768px){
+    .content-area.news-page,
     .content-area.basic-page,
     .content-area.qa-page,
     .content-area.about-page{

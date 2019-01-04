@@ -40,7 +40,7 @@ get_header(); ?>
 
 
                         //$image   = aq_resize( $img_url, 1200, 800, true ); // Resize & crop img
-                        echo '
+                          echo '
                                 <div class="block-qa-wrap">
                                     <div class="title-accordion">
                                         '.get_the_title($post_id).'<i class="fas fa-chevron-circle-down"></i>
@@ -49,7 +49,7 @@ get_header(); ?>
                                         '.get_the_content($post_id).'
                                     </div>
                                 </div>
-                                     ';
+                                ';
 
 
                     endwhile;
