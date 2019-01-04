@@ -48,7 +48,9 @@ get_header(); ?>
                             ?>
 
                         </div>
+
                         <div class="home-text-slider-wallpaer">
+                            <div class="overlay-slider"></div>
                             <div class="home-text-slider">
                                 <?php
 
@@ -79,6 +81,7 @@ get_header(); ?>
                             <div class="anonuncer-walpaper-title">
                                 <h3>Объявления</h3>
                             </div>
+                            <div class="overlay-slider"></div>
                             <div class="home-announcement-slider">
                                 <?php
 

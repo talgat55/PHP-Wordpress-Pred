@@ -874,6 +874,17 @@ div.search-form{
 .anonuncer-walpaper::after{
     top: -2px;
 }
+.home-text-slider-wallpaer{
+    position: relative;
+}
+.overlay-slider{
+    background: #0094D2;
+    width: 5px;
+    height: 86px;
+    position: absolute;
+    right: 0;
+    z-index: 19;
+}
 .point-growth-section{
     background: #fff;
 }
@@ -883,6 +894,7 @@ div.search-form{
 .pointer-text-block{
     padding-left: 90px;
 }
+.anonuncer-walpaper,
 .point-growth-section{
     position: relative;
 }
