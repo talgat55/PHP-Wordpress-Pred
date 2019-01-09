@@ -1591,6 +1591,7 @@ footer{
     }
 }
 @media (max-width: 768px){
+    .content-area.search-page,
     .content-area.news-page,
     .content-area.basic-page,
     .content-area.qa-page,

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="412880c1-4238-4e4e-ae79-23f5fd19e899" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,20 +12,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="1632" column="24" lean-forward="true" selection-start-line="1632" selection-start-column="24" selection-end-line="1632" selection-end-column="24" />
+            <state relative-caret-position="280">
+              <caret line="1593" column="29" selection-start-line="1593" selection-start-column="29" selection-end-line="1593" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state relative-caret-position="207">
+              <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -67,6 +65,7 @@
       <find>.maps-link</find>
       <find>qa-pa</find>
       <find>home-text-slider-wallpaer</find>
+      <find>content-ar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -89,8 +88,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/default.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/front-page.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asmart/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/footer.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asmart/style.css" />
       </list>
     </option>
   </component>
@@ -180,12 +179,12 @@
       <workItem from="1545858909109" duration="1897000" />
       <workItem from="1545919715263" duration="394000" />
       <workItem from="1546578256526" duration="7543000" />
-      <workItem from="1547037556014" duration="1069000" />
+      <workItem from="1547037556014" duration="1679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99818000" />
+    <option name="totallyTimeSpent" value="100428000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -200,7 +199,7 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17191818" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17191818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -342,17 +341,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/style.css">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="1632" column="24" lean-forward="true" selection-start-line="1632" selection-start-column="24" selection-end-line="1632" selection-end-column="24" />
+        <state relative-caret-position="207">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/footer.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state relative-caret-position="280">
+          <caret line="1593" column="29" selection-start-line="1593" selection-start-column="29" selection-end-line="1593" selection-end-column="29" />
         </state>
       </provider>
     </entry>
