@@ -1613,9 +1613,50 @@ footer{
         margin-bottom: 20px;
     }
     .logo-slogan {
-        padding-top: 48px;
+        padding-top: 15px;
     }
     #responsive-menu-button {
-        top: 144px !important;
+        top: 145px !important;
+    }
+    .home-image-slider .content-home-slider {
+        padding: 20px;
+    }
+    .first-title-slider {
+        line-height: 1.5;
+        font-size: 27px;
+    }
+    .site-content-contain {
+        padding-top: 40px;
+    }
+    .page-title{
+        margin-top: 40px;
+        font-size: 28px;
+        line-height: 1.5;
+    }
+    .link-to-all{
+        padding: 15px 50px;
+        width: 100%;
+    }
+    .form-overlay {
+        padding: 20px;
+        margin: 0 -15px;
+    }
+    .finanace-block-img h2{
+        font-size: 35px;
+        line-height: 1.5;
+    }
+    .finanace-block-img img{
+        height: 240px;
+    }
+    .finance-third {
+        margin-bottom: 45px;
+    }
+    .finance-second .finanace-block-text {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .about-full-image img{
+        object-fit: cover;
+        width: 100%;
     }
 }
