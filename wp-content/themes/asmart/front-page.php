@@ -292,14 +292,14 @@ get_header(); ?>
                                 <div>
                                     <span>г. Омск</span>
                                     <p>
-                                        ул. Ленина, 34
+                                        ул. Лермонтова, 171А
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                             <div id="map"  class="map-holder">
-                                <a href="https://yandex.ru/maps/66/omsk/?ll=73.374444%2C54.987655&mode=poi&poi%5Bpoint%5D=73.362665%2C54.988775&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1171876261&z=15.48"   target="_blank" class="maps-link">
+                                <a href="https://yandex.ru/maps/66/omsk/?ll=73.426971%2C54.984667&mode=search&poi%5Bpoint%5D=73.362665%2C54.988775&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1171876261&sll=73.374444%2C54.987655&sspn=0.060296%2C0.021321&text=%D1%83%D0%BB.%20%D0%9B%D0%B5%D1%80%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%2C%20171%D0%90%2C%20%D0%9E%D0%BC%D1%81%D0%BA&z=17"   target="_blank" class="maps-link">
                                     Посмотреть на карте
                                 </a>
                             </div>

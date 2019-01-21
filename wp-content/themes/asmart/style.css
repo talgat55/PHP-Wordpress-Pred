@@ -370,6 +370,14 @@ template {
     color: #8b8b8b;
     text-decoration: none;
 }
+.breadcrumbs li{
+    display: inline-block;
+}
+.breadcrumbs .sep:nth-of-type(2n+2),
+.breadcrumbs li:nth-of-type(2n+2){
+    display: none;
+}
+
 /*
 *  Header
  */
@@ -426,7 +434,7 @@ template {
     padding-top: 22px;
 }
 .top-header-right-block .phone {
-    padding-right: 63px;
+    padding-right: 40px;
 }
 .top-header-right-block .location {
     padding-right: 54px;
@@ -808,6 +816,15 @@ div.search-form{
 }
 .predprinimatel-block{
     margin-bottom: 40px;
+
+}
+.predprinimatel-block-walp{
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.predprinimatel-block-walp:hover{
+    transform: scale(1.04);
+    box-shadow: 1px 3px 17px 3px #eee;
 }
 .predprinimatel-class{
     position: relative;

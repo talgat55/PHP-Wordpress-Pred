@@ -227,6 +227,13 @@ if (function_exists('acf_add_options_page')) {
 
 }
 
+add_action( 'init', 'cameronjonesweb_unregister_categories' );
+/**
+ * Removes categories from blog posts
+ */
+function cameronjonesweb_unregister_categories() {
+    unregister_taxonomy_for_object_type( 'category', 'post' );
+}
 
 /*
  * * Икувыскгьи
@@ -259,8 +266,8 @@ function dimox_breadcrumbs()
 
     global $post;
     $home_url = home_url('/');
-    $link_before = '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
-    $link_after = '</span>';
+    $link_before = '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">';
+    $link_after = '</li>';
     $link_attr = ' itemprop="item"';
     $link_in_before = '<span itemprop="name">';
     $link_in_after = '</span>';

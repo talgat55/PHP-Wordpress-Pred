@@ -4,7 +4,7 @@
 
 jQuery(document).ready(function() {
     "use strict";
-
+    jQuery('.page-template-page-news .predprinimatel-block').matchHeight();
     /*
     * Slider Home
     */

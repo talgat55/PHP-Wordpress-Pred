@@ -32,6 +32,7 @@ get_header(); ?>
                                 echo ' 
                                      
                                     <div class="predprinimatel-block  col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="predprinimatel-block-walp">
                                         <div class="predprinimatel-img-block" style="background: url(' . $img_url . ') no-repeat;"></div>
                                         <div class="predprinimatel-content">
                                             <div class="date-predprinimatel">' . get_the_date('d.m.Y', $post_id) . '</div>
@@ -42,6 +43,7 @@ get_header(); ?>
                                             <a href="' . get_the_permalink($post_id) . '" class="link-predprinimatel-detail">Читать далее</a>
                                         </div>
         
+                                    </div>
                                     </div>
                                      ';
 
