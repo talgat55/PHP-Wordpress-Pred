@@ -19,12 +19,13 @@ get_header(); ?>
                     <?php dimox_breadcrumbs(); ?>
                     <h1 class=" page-title"><?php the_title(); ?></h1>
                     <div class="title-separate"></div>
-                    <?php
-                    while (have_posts()) : the_post();
+                    <?php  while (have_posts()) : the_post();  ?>
 
-                        the_content();
+                        <img  class="single-img" src="<?= wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()), 'full'); ?>"  alt="<?php the_title(); ?>" />
 
-                    endwhile;  ?>
+                        <?php the_content();  ?>
+
+                    <?php endwhile;  ?>
                 </div>
             </div>
         </div><!-- #primary -->

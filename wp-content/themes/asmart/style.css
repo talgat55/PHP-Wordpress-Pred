@@ -766,6 +766,7 @@ div.search-form{
     background-size: cover!important;
     height: 220px;
     width: 100%;
+    display: block;
 }
 
 .date-predprinimatel{
@@ -1680,4 +1681,9 @@ footer{
         object-fit: cover;
         width: 100%;
     }
+}
+
+.single-img{
+    max-width: 100%;
+    margin-bottom: 30px;
 }

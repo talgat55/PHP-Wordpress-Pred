@@ -148,7 +148,7 @@ get_header(); ?>
                                 echo ' 
                                      
                                     <div class="predprinimatel-block  col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                        <div class="predprinimatel-img-block" style="background: url(' . $img_url . ') no-repeat;"></div>
+                                        <a  href="' . get_the_permalink($post_id) . '"  class="predprinimatel-img-block" style="background: url(' . $img_url . ') no-repeat;"></a>
                                         <div class="predprinimatel-content">
                                             <div class="date-predprinimatel">' . get_the_date('d.m.Y', $post_id_slider) . '</div>
                                             <h3 class="predprinimatel-title">' . get_the_title($post_id_slider) . '</h3>
@@ -168,8 +168,8 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="block-over">
-                        <a href="/news" class="link-to-all">
-                            Перейти ко всем новостям
+                        <a href="/predprinimateli" class="link-to-all">
+                            Перейти ко всем предпринимателям
                         </a>
                     </div>
                 </div>
