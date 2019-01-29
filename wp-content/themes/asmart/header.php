@@ -26,16 +26,16 @@
             <div class="container">
                 <div class="row-top-header clearfix">
                     <div class="row">
-                        <div class="top-header-left-block col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="top-header-left-block col-lg-7 col-md-7 col-sm-12 col-xs-12">
                             <a href="<?php echo home_url(); ?>" class="logo">
                                 <img src="<?php echo get_theme_file_uri('/assets/images/logo.png') ?>" alt="Logo">
                             </a>
                             <p class="logo-slogan">
-                                <span>Развитие малого и среднего бизнеса</span><br/>
-                                на территории Омского района
+                                <span>Развитие малого и среднего предпринимательства</span><br/>
+                                на территории Омского муниципального района
                             </p>
                         </div>
-                        <div class="top-header-right-block  col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="top-header-right-block  col-lg-5 col-md-5 col-sm-12 col-xs-12">
                             <div class="phone">
                                 <img src="<?php echo get_theme_file_uri('/assets/images/phone.png') ?>"
                                      alt="Иконка телефона">

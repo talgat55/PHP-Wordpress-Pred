@@ -33,14 +33,13 @@ get_header(); ?>
                                      
                                     <div class="predprinimatel-block  col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                     <div class="predprinimatel-block-walp">
-                                        <a  href="' . get_the_permalink($post_id) . '" class="predprinimatel-img-block" style="background: url(' . $img_url . ') no-repeat;"></a>
+                                        <a   class="predprinimatel-img-block" style="background: url(' . $img_url . ') no-repeat;"></a>
                                         <div class="predprinimatel-content">
                                             <div class="date-predprinimatel">' . get_the_date('d.m.Y', $post_id) . '</div>
                                             <h3 class="predprinimatel-title">' . get_the_title($post_id) . '</h3>
                                             <div class="predprinimatel-excerpt">
                                                 ' . my_string_limit_words(get_the_content($post_id), '16') . '
-                                            </div>
-                                            <a href="' . get_the_permalink($post_id) . '" class="link-predprinimatel-detail">Читать далее</a>
+                                            </div> 
                                         </div>
         
                                     </div>

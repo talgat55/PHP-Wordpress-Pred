@@ -101,7 +101,7 @@ get_header(); ?>
                                     ?>
                                     <?php if ($premia_img) { ?>
 
-                                        <h2> Премия главы</h2>
+                                        <h2> Премия Главы</h2>
 
 
                                         <img src="<?php echo $premia_img; ?>" alt="картинка Премия главы"/>
@@ -113,7 +113,7 @@ get_header(); ?>
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="finanace-block-text">
                                     <h2 class="page-title  margin-top-0">
-                                        Премия главы
+                                        Премия Главы
                                     </h2>
                                     <div class="title-separate"></div>
                                     <?php

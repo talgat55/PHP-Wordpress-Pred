@@ -145,17 +145,16 @@ get_header(); ?>
                                 $post_id_slider = $the_query_slider->post->ID;
 
                                 $img_url = wp_get_attachment_url(get_post_thumbnail_id($post_id_slider), 'full');
-                                echo ' 
-                                     
+                                echo '  
                                     <div class="predprinimatel-block  col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                                        <a  href="' . get_the_permalink($post_id) . '"  class="predprinimatel-img-block" style="background: url(' . $img_url . ') no-repeat;"></a>
+                                        <a  href="/predprinimateli"  class="predprinimatel-img-block" style="background: url(' . $img_url . ') no-repeat;"></a>
                                         <div class="predprinimatel-content">
                                             <div class="date-predprinimatel">' . get_the_date('d.m.Y', $post_id_slider) . '</div>
                                             <h3 class="predprinimatel-title">' . get_the_title($post_id_slider) . '</h3>
                                             <div class="predprinimatel-excerpt">
                                                 ' . my_string_limit_words(get_the_content($post_id_slider), '16') . '
                                             </div>
-                                            <a href="' . get_the_permalink($post_id_slider) . '" class="link-predprinimatel-detail">Читать далее</a>
+                                            <a href="/predprinimateli" class="link-predprinimatel-detail">Читать далее</a>
                                         </div>
         
                                     </div>
