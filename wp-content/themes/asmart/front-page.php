@@ -74,12 +74,13 @@ get_header(); ?>
                                 ?>
                             </div>
                         </div>
-
+                        <a href="/news"  class="news-link-home" >Все новости</a>
                     </div>
                     <div class="col-lg-3 col-md-3  col-sm-12 col-xs-12">
                         <div class="anonuncer-walpaper">
                             <div class="anonuncer-walpaper-title">
                                 <h3>Объявления</h3>
+                                <a href="/obyavleniya"  >Все объявления</a>
                             </div>
                             <div class="overlay-slider"></div>
                             <div class="home-announcement-slider">
