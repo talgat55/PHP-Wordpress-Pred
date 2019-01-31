@@ -36,29 +36,34 @@
                             </p>
                         </div>
                         <div class="top-header-right-block  col-lg-5 col-md-5 col-sm-12 col-xs-12">
-                            <div class="phone">
-                                <img src="<?php echo get_theme_file_uri('/assets/images/phone.png') ?>"
-                                     alt="Иконка телефона">
-                                <a href="tel:8 800 312 55 12">8 800 312 55 12</a>
-                                <p>08:00 — 18:00</p>
-                            </div>
-                            <div class="location">
-                                <img src="<?php echo get_theme_file_uri('/assets/images/geo.png') ?>" alt="Иконка локации">
-                                <div>
-                                    <span>г. Омск</span>
+                            <ul>
+                                <li class="phone">
+                                    <img src="<?php echo get_theme_file_uri('/assets/images/phone.png') ?>"
+                                         alt="Иконка телефона">
+                                    <a href="tel:391675">39-16-75</a>
+                                    <p>Пн-ЧТ с 8:30 до 17: 45</p>
+                                    <p>Пт- с 8:30 до 16: 30</p>
+                                </li>
+                                <li class="location ">
+                                    <img src="<?php echo get_theme_file_uri('/assets/images/geo.png') ?>" alt="Иконка локации">
+                                    <div>
+                                        <span>г. Омск</span>
+                                        <p>
+                                            ул. Лермонтова, 171А
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="call">
+                                    <a href="#" class="call-link">
+                                        Заказать звонок
+                                    </a>
                                     <p>
-                                        ул. Лермонтова, 171А
+                                        Перезвоним за 15 минут
                                     </p>
-                                </div>
-                            </div>
-                            <div class="call">
-                                <a href="#" class="call-link">
-                                    Заказать звонок
-                                </a>
-                                <p>
-                                    Перезвоним за 15 минут
-                                </p>
-                            </div>
+                                </li>
+                            </ul>
+
+
                         </div>
 
                     </div>

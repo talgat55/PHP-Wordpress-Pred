@@ -283,8 +283,9 @@ get_header(); ?>
                             <div class="phone">
                                 <img src="<?php echo get_theme_file_uri('/assets/images/phone.png') ?>"
                                      alt="Иконка телефона">
-                                <a href="tel:8 800 312 55 12">8 800 312 55 12</a>
-                                <p>08:00 — 18:00</p>
+                                <a href="tel:391675">39-16-75</a>
+                                <p>Пн-ЧТ с 8:30 до 17: 45</p>
+                                <p>Пт- с 8:30 до 16: 30</p>
                             </div>
                             <div class="location">
                                 <img src="<?php echo get_theme_file_uri('/assets/images/geo.png') ?>"
