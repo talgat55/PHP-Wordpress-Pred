@@ -12,6 +12,7 @@
     </title>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="keywords" content="предприниматель, предприниматель омск, омский район, развитие предпринимательства, предприниматели55, финансовая поддержка, точка роста">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="<?php echo get_theme_file_uri('/assets/images/favicon.ico?v=1.1') ?>"  type="image/x-icon"/>
 
