@@ -38,7 +38,7 @@ get_header(); ?>
                                             <div class="date-predprinimatel">' . get_the_date('d.m.Y', $post_id) . '</div>
                                             <h3 class="predprinimatel-title">' . get_the_title($post_id) . '</h3>
                                             <div class="predprinimatel-excerpt">
-                                                ' . my_string_limit_words(get_the_content($post_id), '16') . '
+                                                ' . strip_tags(my_string_limit_words(get_the_content($post_id), '16')) . '
                                             </div>
                                             <a href="' . get_the_permalink($post_id) . '" class="link-predprinimatel-detail">Читать далее</a>
                                         </div>

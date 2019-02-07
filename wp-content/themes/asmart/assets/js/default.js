@@ -10,24 +10,30 @@ jQuery(document).ready(function() {
     */
 
     jQuery('.home-image-slider').slick({
-        infinite: false,
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
         autoplay: true,
         arrows: false,
+        focusOnSelect: true,
+        swipeToSlide: true,
         asNavFor: '.home-text-slider'
     });
 
+    var CountPost = jQuery('.home-text-slider-wallpaer').attr('data-count');
+    console.log(CountPost);
+
     jQuery('.home-text-slider').slick({
-        infinite: false,
-        slidesToShow: 5,
+        infinite: true,
+        slidesToShow: parseInt(CountPost-1),
         slidesToScroll: 1,
         vertical: true,
         verticalSwiping: true,
         dots: false,
-        asNavFor: '.home-image-slider',
         autoplay: true,
+        swipeToSlide: true,
+        asNavFor: '.home-image-slider',
         arrows: false
     });
 
@@ -42,9 +48,39 @@ jQuery(document).ready(function() {
         arrows: false
     });
 
+    jQuery(".home-text-slider, .home-image-slider").each(function() {
+        this.slick.getNavigableIndexes = function() {
+
+            var _ = this,
+                breakPoint = 0,
+                counter = 0,
+                indexes = [],
+                max;
+
+            if (_.options.infinite === false) {
+                max = _.slideCount;
+            } else {
+                breakPoint = _.options.slideCount * -1;
+                counter = _.options.slideCount * -1;
+                max = _.slideCount * 2;
+            }
+
+            while (breakPoint < max) {
+                indexes.push(breakPoint);
+                breakPoint = counter + _.options.slidesToScroll;
+                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
+            }
+
+            return indexes;
+
+        };
+    });
+
+
+
     jQuery('body').on('click', '.home-text-slider .slider-text-walpaper',function(){
 
-        var currentIndex = jQuery(this).index();
+        var currentIndex = jQuery(this).attr('data-index');
         console.log(currentIndex);
         jQuery('.home-image-slider').slick('slickGoTo', currentIndex);
 

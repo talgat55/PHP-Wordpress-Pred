@@ -42,7 +42,7 @@ get_header(); ?>
                                     <div class="title-separate"></div>
                                     <?php
                                     $sub_text = get_field('subsidii_text');
-                                    echo $sub_text;
+                                    echo strip_tags($sub_text);
                                     ?>
                                     <a href="/finansovaya-poderzhka-2/subcidii" class="link-predprinimatel-detail">Подробнее о субсидиях</a>
 
@@ -62,7 +62,7 @@ get_header(); ?>
                                     <div class="title-separate"></div>
                                     <?php
                                     $grant_text = get_field('grant-text');
-                                    echo $grant_text;
+                                    echo strip_tags($grant_text);
                                     ?>
                                     <a href="/finansovaya-poderzhka-2/grantovayapoderzka/" class="link-predprinimatel-detail">Подробнее о грантовой поддержки</a>
                                 </div>
@@ -120,7 +120,7 @@ get_header(); ?>
 
                                     $premia_text = get_field('premia_text');
 
-                                    echo $premia_text;
+                                    echo strip_tags($premia_text);
                                     ?>
                                     <a href="/finansovaya-poderzhka-2/premiyaglavi/" class="link-predprinimatel-detail">Подробнее о премии главы</a>
                                 </div>

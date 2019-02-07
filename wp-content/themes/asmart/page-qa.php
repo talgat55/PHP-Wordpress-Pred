@@ -46,7 +46,7 @@ get_header(); ?>
                                         '.get_the_title($post_id).'<i class="fas fa-chevron-circle-down"></i>
                                     </div>
                                     <div class="content-qa">
-                                        '.get_the_content($post_id).'
+                                        '.strip_tags(get_the_content($post_id)).'
                                     </div>
                                 </div>
                                 ';

@@ -21,11 +21,15 @@ get_header(); ?>
                         );
 
                         $the_query_slider = new WP_Query($argsslideer);
+                        $textslider = $the_query_slider;
+
+                        $count = wp_count_posts( 'post', 'readable' );
+
                         ?>
                         <div class="home-image-slider">
                             <?php
 
-
+                            $i=0;
                             while ($the_query_slider->have_posts()) :
                                 $the_query_slider->the_post();
                                 $post_id_slider = $the_query_slider->post->ID;
@@ -35,41 +39,41 @@ get_header(); ?>
 
                                 //$image   = aq_resize( $img_url, 1200, 800, true ); // Resize & crop img
                                 echo '
-                                    <div class="slider-item-walpaper"  style="background: url(' . $img_url . ')  no-repeat;">
-                                            <div class="content-home-slider">  
+                                    <div class="slider-item-walpaper"  style="background: url(' . $img_url . ')  no-repeat;"  data-index="'.$i.'">
+                                            <div class="content-home-slider">
                                                         <div class="first-title-slider">' . get_the_title($post_id_slider) . '</div>
-                                                        <div class="second-text-slider">' . my_string_limit_words(get_the_content($post_id_slider), '24') . '</div>
-                                                        <a class="link-slider" href="' . get_the_permalink($post_id_slider) . '">Читать далее</a> 
+                                                        <div class="second-text-slider">' . strip_tags(my_string_limit_words(get_the_content($post_id_slider), '24')) . '</div>
+                                                        <a class="link-slider" href="' . get_the_permalink($post_id_slider) . '">Читать далее</a>
                                             </div>
                                      </div>';
 
-
+                                $i++;
                             endwhile;
                             ?>
 
                         </div>
 
-                        <div class="home-text-slider-wallpaer">
+                        <div class="home-text-slider-wallpaer"  data-count="<?= $count->publish; ?>">
                             <div class="overlay-slider"></div>
                             <div class="home-text-slider">
                                 <?php
 
-
-                                while ($the_query_slider->have_posts()) :
-                                    $the_query_slider->the_post();
-                                    $post_id_slider = $the_query_slider->post->ID;
+                                $i = 0;
+                                while ($textslider->have_posts()) :
+                                    $textslider->the_post();
+                                    $post_id_slider = $textslider->post->ID;
 
 
                                     //$image   = aq_resize( $img_url, 1200, 800, true ); // Resize & crop img
                                     echo '
-                                    <div class="slider-text-walpaper" >
-                                            <div class="content-home-slider"> 
+                                    <div class="slider-text-walpaper"  data-index="'.$i.'" >
+                                            <div class="content-home-slider">
                                                         <div class="text-slider-date">' . get_the_date('d.m.Y', $post_id_slider) . '</div>
-                                                        <div class="text-slider-title">' . get_the_title($post_id_slider) . '</div> 
+                                                        <div class="text-slider-title">' . get_the_title($post_id_slider) . '</div>
                                             </div>
                                      </div>';
 
-
+                                    $i++;
                                 endwhile;
                                 ?>
                             </div>
@@ -153,7 +157,7 @@ get_header(); ?>
                                             <div class="date-predprinimatel">' . get_the_date('d.m.Y', $post_id_slider) . '</div>
                                             <h3 class="predprinimatel-title">' . get_the_title($post_id_slider) . '</h3>
                                             <div class="predprinimatel-excerpt">
-                                                ' . my_string_limit_words(get_the_content($post_id_slider), '16') . '
+                                                ' . strip_tags(my_string_limit_words(get_the_content($post_id_slider), '16')) . '
                                             </div>
                                             <a href="/predprinimateli" class="link-predprinimatel-detail">Читать далее</a>
                                         </div>
@@ -246,7 +250,7 @@ get_header(); ?>
                                         '.get_the_title($post_id).'<i class="fas fa-chevron-circle-down"></i>
                                     </div>
                                     <div class="content-qa">
-                                        '.get_the_content($post_id).'
+                                        '.strip_tags(get_the_content($post_id)).'
                                     </div>
                                 </div>
                                 ';
