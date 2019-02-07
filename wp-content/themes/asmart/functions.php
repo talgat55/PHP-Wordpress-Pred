@@ -228,12 +228,7 @@ if (function_exists('acf_add_options_page')) {
 }
 
 add_action( 'init', 'cameronjonesweb_unregister_categories' );
-/**
- * Removes categories from blog posts
- */
-function cameronjonesweb_unregister_categories() {
-    unregister_taxonomy_for_object_type( 'category', 'post' );
-}
+
 
 /*
  * * Икувыскгьи
