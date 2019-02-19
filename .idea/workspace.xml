@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="412880c1-4238-4e4e-ae79-23f5fd19e899" name="Default Changelist" comment="" />
+    <list default="true" id="412880c1-4238-4e4e-ae79-23f5fd19e899" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/page-news.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/page-news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/asmart/page-subsidii.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/asmart/page-subsidii.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,20 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/single.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+            <state relative-caret-position="826">
+              <caret line="226" selection-start-line="226" selection-end-line="226" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/functions.php">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-predprenimatel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5198">
-              <caret line="226" lean-forward="true" selection-start-line="226" selection-end-line="226" />
+            <state relative-caret-position="230">
+              <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-subsidii.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -74,12 +86,9 @@
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/search.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/404.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asmart/page-subsidii.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/footer.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asmart/page-news.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/style.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/asmart/single.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/page-qa.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/page-finance.php" />
@@ -87,6 +96,9 @@
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/page-predprenimatel.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/asmart/assets/js/default.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asmart/single.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asmart/page-news.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/asmart/page-subsidii.php" />
       </list>
     </option>
   </component>
@@ -187,11 +199,12 @@
       <workItem from="1549260448092" duration="1701000" />
       <workItem from="1549519140114" duration="1259000" />
       <workItem from="1549527093211" duration="5996000" />
+      <workItem from="1550572598896" duration="1090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124514000" />
+    <option name="totallyTimeSpent" value="125604000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -206,7 +219,7 @@
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19292426" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19513543" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -272,13 +285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-subsidii.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -286,31 +292,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="33" column="75" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39974">
           <caret line="1738" column="25" selection-start-line="1738" selection-start-column="25" selection-end-line="1738" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5198">
-          <caret line="226" lean-forward="true" selection-start-line="226" selection-end-line="226" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-objavleniya.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
@@ -362,17 +347,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-objavleniya.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="40" column="62" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-predprenimatel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="230">
           <caret line="27" column="46" lean-forward="true" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/single.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/asmart/page-subsidii.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        <state relative-caret-position="320">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>

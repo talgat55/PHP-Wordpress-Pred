@@ -32,9 +32,13 @@ get_header(); ?>
                     $files = get_field('files');
 
                     foreach ($files as $file){
+
+                        if(!empty($file['doc'])){
                             echo '
                                 <li> <i class="far fa-file"></i> <a target="_blank" href="'.$file['doc']['url'].'"  > <span>'.$file['doc']['title'].'</span> ('. (getRemoteFileSize($file['doc']['url'] ) / 1000).' кб.)</a></li>
                             ';
+                        }
+
                     }
 
                     ?>
